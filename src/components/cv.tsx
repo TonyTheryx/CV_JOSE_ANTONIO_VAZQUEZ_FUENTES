@@ -20,7 +20,7 @@ return(
   Perfil profesional
 </h2>
 <p className="text-2xl">
- Mi nombre es José Antonio Vázquez Fuentes, soy estudiante del Instituto Tecnológico de Morelia de la ingeniería en sistemas computacionales, próximo a concluir el séptimo semestre durante el periodo de Otoño 2025. Actualmente los mejores trabajos de mi carrera son productos en general de software (generalmente aplicaciones o sitios web lo más destacado), tengo conocimientos para desarrollar productos gráficos (logotipos e interfaces gráficas).
+ Mi nombre es José Antonio Vázquez Fuentes, soy estudiante del Instituto Tecnológico de Morelia de la ingeniería en sistemas computacionales, próximo a concluir el séptimo semestre durante el periodo de Primavera 2026. Actualmente los mejores trabajos de mi carrera son productos en general de software (generalmente aplicaciones o sitios web lo más destacado), tengo conocimientos para desarrollar productos gráficos (logotipos e interfaces gráficas).
 </p>
     </div>
 
