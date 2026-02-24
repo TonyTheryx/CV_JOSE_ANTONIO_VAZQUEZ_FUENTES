@@ -7,8 +7,8 @@ type TextProps = {
 
 
 export const Text = ({ initialText, initialTitle}: TextProps) => {
-  const [text, setText] = useState(initialText)
-  const [title, setTitle] = useState(initialTitle)
+  const [text] = useState(initialText)
+  const [title] = useState(initialTitle)
 
   return (
     <><h1 className="text-5xl">
