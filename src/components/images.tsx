@@ -8,12 +8,14 @@ import A from "../images/1.png"
 import B from "../images/2.png"
 import C from "../images/3.png"
 import D from "../images/4.png"
+import Redes from "../images/Redes Sociales.png"
 
 export const Images = () =>{
 return(
     <>
     <div className="min-h-screen bg-red-500 flex flex-col items-center justify-center text-white">
-      <h2 className="text-4xl bg-blue-500">IMÁGENES DE TRABAJOS TANTO GRÁFICOS CÓMO SOFTWARE</h2>
+      <br />
+      <h2 className="text-4xl bg-midnight rounded-lg border-3 border-white-500">IMÁGENES DE TRABAJOS TANTO GRÁFICOS CÓMO SOFTWARE</h2>
       <br />
       <img src={Courage} alt="" />
       <img src={Chevrolet} alt="" />
@@ -24,7 +26,7 @@ return(
       <img src={B} alt="" />
       <img src={C} alt="" />
       <img src={D} alt="" />
-
+      <img src={Redes} alt="" />
     </div>
     </>
 )
