@@ -1,0 +1,262 @@
+body{
+    margin:0;
+    font-family:"Segoe UI",sans-serif;
+}
+
+/*Background Color*/
+.bg-sky{
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #dcffff 35%,
+    #8fe8ff 70%,
+    #ffffff
+    );
+
+}
+
+
+.hero-card{
+
+    position:relative;
+
+    width:620px;
+
+    padding:50px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.85),
+    rgba(210,240,255,.55)
+    );
+
+    border:2px solid white;
+
+    box-shadow:
+
+    0 20px 60px rgba(0,120,255,.35),
+
+    inset 0 3px 8px white,
+
+    inset 0 -6px 15px rgba(0,150,255,.2);
+
+    backdrop-filter:blur(5px);
+
+}
+
+.hero-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:45%;
+
+    border-radius:inherit;
+
+    background:
+
+    linear-gradient(
+    rgba(255,255,255,.85),
+    transparent
+    );
+
+}
+
+.logo-circle{
+
+    width:130px;
+
+    height:130px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:60px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    white,
+    #0076ff,
+    #87f4ff
+    );
+
+    border:3px solid white;
+
+    box-shadow:
+
+    0 0 30px rgba(0,170,255,.6),
+
+    inset 0 4px 8px white;
+
+}
+
+.hero-card h1{
+
+    color:#14598d;
+
+    margin-top:30px;
+
+    font-size:52px;
+
+    text-shadow:
+
+    0 2px 2px white;
+
+}
+
+.hero-card p{
+
+    color:#206d8f;
+
+    font-size:20px;
+
+}
+
+/*Button Styles*/
+.hero-button{
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    color:#004f7a;
+
+    background:
+
+    linear-gradient(
+    white,
+    #3fd9ff,
+    #d9ffff
+    );
+
+    border:2px solid white;
+
+    box-shadow:
+
+    inset 0 2px 5px rgb(255, 255, 255),
+
+    0 8px 20px rgba(255, 255, 255, 0.35);
+
+}
+
+.hero-button:hover{
+
+    transform:translateY(-2px) scale(1.04);
+
+}
+
+.bubble{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+    circle at 30% 30%,
+    rgb(219, 247, 255),
+    rgba(69, 221, 255, 0.55),
+    rgba(26, 26, 26, 0.1)
+    );
+
+    box-shadow:
+
+    0 0 15px white,
+
+    inset 0 0 20px white,
+
+    inset -8px -8px 15px rgba(0,150,255,.2);
+
+}
+
+.grass{
+
+    height:170px;
+
+    background:
+
+    linear-gradient(
+    
+    #adadad,
+    #1e1e1e,
+    #959595
+    );
+
+    border-top:4px solid rgba(255,255,255,.6);
+
+    box-shadow:
+
+    inset 0 15px 30px rgba(255,255,255,.35);
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:
+        translateY(0)
+        scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+.animate-float{
+
+    animation:float linear infinite;
+
+}
