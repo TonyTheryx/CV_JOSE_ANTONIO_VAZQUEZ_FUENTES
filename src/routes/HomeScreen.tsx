@@ -1,5 +1,6 @@
 import FrutigerBar from "../components/FrutigerBar";
 import "../CSS/HomeScreen.css";
+import WarningBox from "../components/warningBox";
 
 const bubbles = Array.from({ length: 18 }, (_, i) => ({
   id: i,
@@ -13,7 +14,8 @@ export default function HomeScreen() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-sky">
       <FrutigerBar />
-
+      <WarningBox message="This is a warning message!" />
+      
 
       {/* Cielo */}
       <div className="absolute" />

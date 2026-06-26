@@ -1,5 +1,7 @@
 export default function cancelButton() {
     return (
-        <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cancelar</button>
+        <button className="bg-linear-to-b from-white via-red-500 to-white hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+      Click me!
+    </button>
     );
 };
