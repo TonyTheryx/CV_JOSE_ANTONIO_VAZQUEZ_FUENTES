@@ -1,6 +1,10 @@
 import FrutigerBar from "../components/FrutigerBar";
 import "../CSS/HomeScreen.css";
+import WarningBox1 from "../components/warningBox1";
 import WarningBox from "../components/warningBox";
+import React from "react";
+import BarButton from '../components/BarButton';
+import Tx from "../components/SVG/Tx";    
 
 const bubbles = Array.from({ length: 18 }, (_, i) => ({
   id: i,
@@ -11,12 +15,20 @@ const bubbles = Array.from({ length: 18 }, (_, i) => ({
 }));
 
 export default function HomeScreen() {
+
+  const [isFrutigerBarVisible, setIsFrutigerBarVisible] = React.useState(true);
   return (
     <div className="relative min-h-screen overflow-hidden bg-sky">
-      <FrutigerBar />
-      <WarningBox message="This is a warning message!" />
-      
 
+      <FrutigerBar isVisible={isFrutigerBarVisible} />
+      <WarningBox1 message="This is a warning message!" />
+      <WarningBox message="This is another warning message!" />
+      
+      <BarButton
+      isVisible={isFrutigerBarVisible}
+      setIsVisible={setIsFrutigerBarVisible}
+    />
+    
       {/* Cielo */}
       <div className="absolute" />
 
@@ -42,7 +54,10 @@ export default function HomeScreen() {
       </div>
 
       {/* Césped */}
-      <div className="absolute bottom-0 left-0 right-0 grass" />
+      <div className="absolute bottom-0 left-0 right-0 grass">
+        <Tx/>
+      </div>
+
 
       {/* Contenido */}
       <main className="relative z-10 flex flex-col items-center justify-center min-h-screen">
