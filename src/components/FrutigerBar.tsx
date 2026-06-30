@@ -6,7 +6,8 @@ const navItems = [
   { label: "3DModels", icon: "🧊", href: "#models" },
   { label: "Projects", icon: "⚙", href: "#projects" },
   { label: "Electronics", icon: "🎰", href: "#electronics" },
-  { label: "Character Editor", icon: "👤", href: "#CharacterEditor" }
+  { label: "Character Editor", icon: "👤", href: "#CharacterEditor" },
+  { label: "IAAgent", icon: "🤖", href: "#IAAgent" }
 ];
 
 export default function FrutigerBar(props: { isVisible: boolean }) {

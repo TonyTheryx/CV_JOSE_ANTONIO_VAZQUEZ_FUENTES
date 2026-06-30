@@ -75,7 +75,15 @@ export default function HomeScreen() {
             <br />
             Crafting digital experiences.
           </p>
-
+          <br />
+          {/** 
+          <p>
+            Hello! I'm Tony Theryx, and welcome to the TheryxPage, 
+            that is a special area where I can share all my projects, 
+            but also Here I have some funny and aesthetic website places that I really want to share with you,
+            it's I kind of museum, and also portfolio, so enjoy it.
+          </p>
+*/}
           <button className="hero-button">
             Enter
           </button>
