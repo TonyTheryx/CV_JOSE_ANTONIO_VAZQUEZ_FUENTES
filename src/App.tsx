@@ -1,13 +1,22 @@
 import HomeScreen from './routes/HomeScreen'
 import DLaboratory from './routes/3DLaboratory'
-import { Canvas } from "@react-three/fiber";
+import {
+  Route,
+  Routes,
+  BrowserRouter
+} from "react-router";
 
 function App() {
   return (
-    <Canvas>
-      <ambientLight />
-      <DLaboratory />
-    </Canvas>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/3DLaboratory" element={<DLaboratory />} />
+      </Routes>
+    </BrowserRouter>
+
+    
+
   );
 }
 
