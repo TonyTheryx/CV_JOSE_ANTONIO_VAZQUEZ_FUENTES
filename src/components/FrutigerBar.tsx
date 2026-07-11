@@ -3,9 +3,8 @@ import React from "react";
 
 const navItems = [
   { label: "Contact", icon: "✉", href: "/contact" },
-  { label: "Images", icon: "🖼", href: "/images" },
-  { label: "3DModels", icon: "🧊", href: "/models" },
-  { label: "Projects", icon: "⚙", href: "/projects" },
+  { label: "Catalog", icon: "📒", href: "/catalog" },
+  { label: "CV", icon: "📚", href: "/cv" },
   { label: "Electronics", icon: "🎰", href: "/electronics" },
   { label: "Character Editor", icon: "👤", href: "/CharacterEditor" },
   { label: "3D Laboratory", icon: "📦", href: "/3DLaboratory" },
