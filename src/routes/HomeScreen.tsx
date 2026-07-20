@@ -5,6 +5,7 @@ import WarningBox from "../components/warningBox";
 import React from "react";
 import BarButton from '../components/BarButton';
 import Tx from "../components/SVG/Tx";    
+import gsap from "gsap";
 
 const bubbles = Array.from({ length: 18 }, (_, i) => ({
   id: i,
@@ -90,8 +91,53 @@ export default function HomeScreen() {
 
         </section>
 
-        
+      {/* Secciones largas de información */}
+      <section className="info-sections">
+        <article className="info-card">
+          <div className="info-card-gloss"></div>
+          <h2>About Me</h2>
+          <p>
+            Here you can write a long introduction about yourself, your interests,
+            your goals, and what inspires you as a developer and designer.
+          </p>
+        </article>
 
+        <article className="info-card">
+          <div className="info-card-gloss"></div>
+          <h2>My Projects</h2>
+          <p>
+            Describe your video games, web projects, 3D models, and any creative work
+            you want to showcase in your portfolio.
+          </p>
+        </article>
+
+        <article className="info-card">
+          <div className="info-card-gloss"></div>
+          <h2>Skills</h2>
+          <p>
+            Mention your knowledge in React, Blender, game development, design,
+            programming, and other abilities you have learned.
+          </p>
+        </article>
+
+        <article className="info-card">
+          <div className="info-card-gloss"></div>
+          <h2>Music &amp; Inspiration</h2>
+          <p>
+            Share your favorite artists, aesthetic inspirations, and the creative
+            influences that shape your work.
+          </p>
+        </article>
+
+        <article className="info-card">
+          <div className="info-card-gloss"></div>
+          <h2>Contact</h2>
+          <p>
+            Add your email, LinkedIn, GitHub, and social media links so people can
+            reach you easily.
+          </p>
+        </article>
+      </section>
       </main>
 
     </div>
