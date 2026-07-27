@@ -1,14 +1,16 @@
 import React from "react";
+import {FaMusic, FaFilePdf, FaBook, FaGraduationCap, FaMicrochip, FaUser, FaCube, FaRobot, FaCog} from "react-icons/fa";
 
 
 const navItems = [
-  { label: "Contact", icon: "✉", href: "/contact" },
-  { label: "Catalog", icon: "📒", href: "/catalog" },
-  { label: "CV", icon: "📚", href: "/cv" },
-  { label: "Electronics", icon: "🎰", href: "/electronics" },
-  { label: "Character Editor", icon: "👤", href: "/CharacterEditor" },
-  { label: "3D Laboratory", icon: "📦", href: "/3DLaboratory" },
-  { label: "IAAgent", icon: "🤖", href: "/IAAgent" }
+  { label: "Music", icon: <FaMusic className="text-purple-300"/>, href: "/MusicPlayer" },
+  { label: "PDF", icon: <FaFilePdf className="text-purple-300"/>, href: "/PDF" },
+  { label: "Catalog", icon: <FaBook className="text-purple-300"/>, href: "/catalog" },
+  { label: "CV", icon: <FaGraduationCap className="text-purple-300"/>, href: "/cv" },
+  { label: "Electronics", icon: <FaMicrochip className="text-purple-300"/>, href: "/electronics" },
+  { label: "Character Editor", icon: <FaUser className="text-purple-300"/>, href: "/CharacterEditor" },
+  { label: "3D Laboratory", icon: <FaCube className="text-purple-300"/>, href: "/3DLaboratory" },
+  { label: "ChatBot", icon: <FaRobot className="text-purple-300"/>, href: "/ChatBot" }
 ];
 
 export default function FrutigerBar(props: { isVisible: boolean }) {
@@ -32,10 +34,45 @@ export default function FrutigerBar(props: { isVisible: boolean }) {
           <span className="drop-shadow-">{item.label}</span>
         </a>
       ))}
-      <button className="bg-linear-to-b from-teal-300 to-white/5 rounded-full text-white font-medium text-sm tracking-wide px-5 py-2.5 border border-white/20 hover:border-white/40 shadow-lg hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-0.5">
-        Configuration
-      </button>
-      <input type="text" placeholder="Search..." className="bg-gray-800/50 text-white placeholder:text-gray-400 border border-gray-500/20 focus:border-blue-500/40 shadow-lg hover:shadow-xl transition-all duration-300 ease-out" />
+      <details className="relative">
+  <summary
+    className="list-none cursor-pointer bg-linear-to-b from-teal-300 to-white/5
+               rounded-full text-white px-4 py-2.5
+               border border-white/20 hover:border-white/40
+               shadow-lg hover:shadow-xl
+               transition-all duration-300 ease-out
+               hover:-translate-y-0.5 flex items-center justify-center"
+  >
+    <FaCog className="text-lg" />
+  </summary>
+
+  <div
+    className="absolute right-0 mt-2 w-48 rounded-xl
+               bg-gray-800 border border-white/20
+               shadow-xl overflow-hidden z-50"
+  >
+    <a
+      href="/settings/profile"
+      className="block px-4 py-2 text-white hover:bg-purple-600"
+    >
+      Perfil
+    </a>
+
+    <a
+      href="/settings/theme"
+      className="block px-4 py-2 text-white hover:bg-purple-600"
+    >
+      Tema
+    </a>
+
+    <a
+      href="/settings/account"
+      className="block px-4 py-2 text-white hover:bg-purple-600"
+    >
+      Cuenta
+    </a>
+  </div>
+</details>
     </nav>
   );
 }

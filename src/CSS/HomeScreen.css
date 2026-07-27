@@ -10,7 +10,7 @@ body{
 
     linear-gradient(
     180deg,
-    #dcffff 35%,
+    #eaffff 35%,
     #8fe8ff 70%,
     #ffffff
     );
@@ -188,10 +188,10 @@ body{
     background:
 
     radial-gradient(
-    circle at 30% 30%,
-    rgb(219, 247, 255),
-    rgba(69, 221, 255, 0.55),
-    rgba(26, 26, 26, 0.1)
+    circle at 10% 80%,
+    rgb(253, 255, 255),
+    rgba(94, 69, 255, 0.55),
+    rgba(255, 255, 255, 0.1)
     );
 
     box-shadow:
@@ -200,28 +200,7 @@ body{
 
     inset 0 0 20px white,
 
-    inset -8px -8px 15px rgba(0,150,255,.2);
-
-}
-
-.grass{
-    align-items:center;
-    height:170px;
-
-    background:
-
-    linear-gradient(
-    
-    #adadad,
-    #1e1e1e,
-    #3b3b3b
-    );
-
-    border-top:4px solid rgba(255,255,255,.6);
-
-    box-shadow:
-
-    inset 0 15px 30px rgba(255,255,255,.35);
+    inset -8px -8px 15px rgba(234, 246, 255, 0.2);
 
 }
 
@@ -332,4 +311,23 @@ body{
   font-size: 1.05rem;
   line-height: 1.8;
   color: #003b5c;
+}
+
+
+
+/* Figures and objects */
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ffffff, #2135ef);
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
 }
