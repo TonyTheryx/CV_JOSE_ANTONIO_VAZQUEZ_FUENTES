@@ -1,10 +1,10 @@
+import MemphisBackground from "../components/MusicPlayer/MemphisBackground";
 
 export default function MusicPlayer() {
     return (
-<div className="
-bg-blue-300
-min-h-screen
-">
+<div className="bg-blue-400 relative min-h-screen">
+
+<MemphisBackground/>
 <section
 className="
 mx-auto
@@ -143,9 +143,7 @@ duration-300
 
         <p className="mt-5 leading-7">
 
-            Primer álbum inspirado en la
-            música electrónica de los años 70 y
-            el City Pop japonés.
+            My First album inspired by electronic music and retro music of 00's, 90's and 80's music
 
         </p>
 

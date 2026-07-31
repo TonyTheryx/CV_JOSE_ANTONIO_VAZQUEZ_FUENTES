@@ -1,13 +1,44 @@
-import FrutigerBar from "../components/FrutigerBar";
+
 import "../CSS/HomeScreen.css";
 import WarningBox1 from "../components/warningBox1";
 import WarningBox from "../components/warningBox";
 import React, { useRef } from "react";
-import BarButton from '../components/BarButton';
 import Tx from "../components/SVG/Tx";    
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { FaYoutube, FaInstagram, FaTiktok, FaCircle, FaLeaf, FaRegCircle, FaMagic, FaPinterest } from "react-icons/fa";
+import DisciplineCard from "../components/HomePage/DisciplineCard";
+import PortfolioCarousel from "../components/HomePage/PortFolioCarousel"
+import TechCard from "../components/HomePage/TechCard";
+import {
+  FaPencilAlt,
+  FaPaintBrush,
+  FaCube,
+  FaMusic,
+  FaMicrochip,
+  FaGamepad,
+  FaJava
+} from "react-icons/fa";
+import {
+SiReact, 
+SiJavascript,
+ SiHtml5,
+ SiCss,
+ SiPython,
+SiCplusplus,
+SiMysql,
+SiArduino,
+SiTypescript,
+SiBlender,
+SiGodotengine,
+SiPostgresql,
+SiInkscape,
+SiKrita,
+SiLmms,
+} from "react-icons/si"
+import { FaYoutube, 
+    FaInstagram, 
+    FaTiktok,
+    FaPinterest } from "react-icons/fa";
 gsap.registerPlugin(useGSAP);
 // Animation for bubbles
 const bubbles = Array.from({ length: 18 }, (_, i) => ({
@@ -21,10 +52,112 @@ const bubbles = Array.from({ length: 18 }, (_, i) => ({
 
 export default function HomeScreen() {
 
+    
+    
+//Tech Card
+const technologies = [
+    {
+        icon: <SiJavascript size={64} className="text-black" />,
+        title: "JavaScript",
+        description:
+            "I use JavaScript to build web applications with React and Node.js. I understand ES6+, asynchronous programming, APIs and component-based development.",
+    },
+    {
+        icon: <SiTypescript size={64} className="text-black" />,
+        title: "TypeScript",
+        description:
+            "I use TypeScript in React projects to create scalable and type-safe applications.",
+    },
+    {
+        icon: <SiReact size={64} className="text-black" />,
+        title: "React",
+        description:
+            "I build reusable components, responsive interfaces and interactive web applications using React, I have worked with react native for UniRaite.",
+    },
+    {
+        icon: <SiCplusplus size={64} className="text-black" />,
+        title: "C++",
+        description:
+            "I use C++ for algorithms, graphics programming and game development.",
+    },
+    {
+        icon: <SiPython size={64} className="text-black" />,
+        title: "Python",
+        description:
+            "I use Python for scripting, OpenGL experiments, automation and learning computer graphics.",
+    },
+    {
+        icon: <SiMysql size={64} className="text-black" />,
+        title: "MySQL",
+        description:
+            "I design relational databases and work with SQL queries for full-stack applications, it's my common database mannager.",
+    },
+     {
+        icon: <SiPostgresql size={64} className="text-black" />,
+        title: "PostgreSQL",
+        description:
+            "I usually work with MySql (only for experiments and trying things), and when things need to be more structured or with more data I use Postgresql.",
+    },
+    {
+        icon: <FaJava size={64} className="text-black" />,
+        title: "Java",
+        description:
+            "It is one of my main programming lenguage because I have worked with java since I started the university",
+    },
+    {
+        icon: <SiArduino size={64} className="text-black" />,
+        title: "Arduino",
+        description:
+            "For all my electronic projects.",
+    },
+    {
+        icon: <SiHtml5 size={64} className="text-black" />,
+        title: "HTML",
+        description:
+            "I learned in 6th semester, but I don't use it too much because I use react.",
+    },
+    {
+        icon: <SiCss size={64} className="text-black" />,
+        title: "CSS",
+        description:
+            "I use it for specific things, like web graphics or animations.",
+    },
+    {
+        icon: <SiBlender size={64} className="text-black" />,
+        title: "Blender",
+        description:
+            "My favorite 3D program (because it's free!).",
+    },
+    {
+        icon: <SiGodotengine size={64} className="text-black" />,
+        title: "GodotEngine",
+        description:
+            "I like godot it's a fast way to program videogames, and also a powerful tool for it.",
+    },
+    {
+        icon: <SiInkscape size={64} className="text-black" />,
+        title: "Inkscape",
+        description:
+            "I use it to create SVG's or vector images (it's an It is an incredible tool for images that requires precision.) ",
+    },
+    {
+        icon: <SiKrita size={64} className="text-black" />,
+        title: "Krita",
+        description:
+            "I use it to draw digital things, it's more for artworks and draw details.",
+    },
+    {
+        icon: <SiLmms size={64} className="text-black" />,
+        title: "LMMS",
+        description:
+            "A simple music producer program that I always use (It could be simple, but I think I can do excelent works with it).",
+    }
+];
+
 
   // Animation for the main text
   const container = useRef(null);
-  const text = "Hello My name is Joseph TonyTheryx, I am an artist and a developer, I like to design nostalgic and diferent experiences.";
+  const text = "Hello My name is Joseph TonyTheryx, I am an artist and a developer, I like to design retro and diferent experiences.";
   const words = text.split(" ");
  useGSAP(() => {
   gsap.from(".word", {
@@ -48,17 +181,10 @@ useGSAP(() => {
 }, { scope: boxRef, dependencies: []});
 
 
-  const [isFrutigerBarVisible, setIsFrutigerBarVisible] = React.useState(true);
   return (
     <div className="relative min-h-screen overflow-hidden bg-sky">
-      <FrutigerBar isVisible={isFrutigerBarVisible} />
       <WarningBox1 message="This is a warning message!" />
       <WarningBox message="This is another warning message!" />
-      
-      <BarButton
-      isVisible={isFrutigerBarVisible}
-      setIsVisible={setIsFrutigerBarVisible}
-    />
       
       {/* Cielo */}
       <div className="absolute" />
@@ -138,7 +264,15 @@ useGSAP(() => {
 
                 </p>
 
-                <button className="
+                <button
+                onClick={() => {
+                    document
+                        .getElementById("portfolio")
+                        ?.scrollIntoView({
+                            behavior: "smooth",
+                        });
+                }}
+                className="
                     mt-10
                     px-10
                     py-4
@@ -149,9 +283,10 @@ useGSAP(() => {
                     text-xl
                     font-semibold
                     transition
-                ">
-                    Ver Portafolio
-                </button>
+                "
+            >
+                Go to Portfolio
+            </button>
 
             </div>
 
@@ -178,7 +313,9 @@ useGSAP(() => {
     </section>
 
     {/* CONTENEDOR DEL RESTO */}
-    <section className="
+    <section 
+    id="portfolio"
+    className="
         mx-auto
         w-[90%]
         max-w-7xl
@@ -204,120 +341,163 @@ useGSAP(() => {
                 </p>
 
                 <h2 className="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
-                    Visión Orgánica y Futurista
+                    Works
                 </h2>
 
                 <p className="mt-10 text-xl leading-10 text-slate-600">
-                   
-                </p>
+                   I am a multidisciplinary artist and developer, I like to create diferent types of things and experiences, but it's kind of dificult trying to learn about different areas at the same time,
+                   so I am trying to focus on a few areas that I really like and want to master, but I also want to keep learning about other areas that I find interesting.
 
+                </p>
+                <p className="mt-6 text-xl leading-10 text-slate-600 gap-5">
+                I have worked in few works, but here there are the most important works that I ever worked.
+                </p>
+                
             </div>
 
             {/* Imagen */}
-            <div className="flex justify-center">
+           <div
+            className="
+                relative
+                p-8
+                rounded-[40px]
+                bg-gradient-to-b
+                to-blue-300/100
+                to-blue-300/100
+                via-white/100
+                
+                backdrop-blur-xl
+                border
+                border-cyan-200/60
+                shadow-[0_0_30px_rgba(0,180,255,0.35)]
+                before:absolute
+                before:inset-3
+                before:rounded-[30px]
+                before:border
+                before:border-white/40
+                before:pointer-events-none
+            "
+            >
 
-                <img
-                    src="/Images/crystal.png" // cambia la ruta por tu imagen
-                    alt="Cristales"
-                    className="
-                        w-full
-                        max-w-2xl
-                        rounded-[2.5rem]
-                        object-cover
-                        shadow-2xl
-                    "
-                />
+                <PortfolioCarousel/>
 
             </div>
+            
+                {/* Team Works */}
+            <div>
+            <h2 className="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                Team works
+            </h2>
+                <p className="mt-6 text-xl leading-10 text-slate-600 gap-5">
+            Next works were works that I participated but they were works with more people behind.
+                </p>
 
+                
+            </div>
+                
+                <div>
+                </div>
+
+                {/* The end */}
+                <div>
+                <p className="mt-6 text-xl leading-10 text-slate-600 gap-5">
+                    I have more art works, but I save those in my social media, that you could find at the end of this page.
+                </p>    
+                </div>
         </div>
 
     </section>
 
     </section>
 
+{/* Section of habilities & disciplines */}
+<section className="w-full py-24 px-8">
 
-        <section className="w-full py-24 px-8">
+  <div className="max-w-7xl mx-auto">
 
-    <div className="max-w-7xl mx-auto">
+    <h2 className="text-5xl font-black text-slate-900 mb-20">
+      Habilities & Disciplines that I'd love to explore more and master (Hobbies)
+    </h2>
 
-        <h2 className="text-5xl font-black text-slate-900 mb-20">
-            Habilities and Services
-        </h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <DisciplineCard
+        icon={<FaPencilAlt />}
+        title="Drawing"
+        description="Traditional sketches, anatomy studies, perspective, and creative illustration."
+      />
 
-            <div className="flex flex-col items-center text-center">
+      <DisciplineCard
+        icon={<FaPaintBrush />}
+        title="Digital & Pixel Art"
+        description="Digital paintings, pixel art, concept illustrations, and stylized artwork."
+      />
 
-                <div className="w-20 h-20 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-500 text-3xl shadow-md">
-                    <FaRegCircle />
-                </div>
+      <DisciplineCard
+        icon={<FaCube />}
+        title="3D Modeling & Texturing"
+        description="Creating optimized 3D models, materials, textures, and real-time assets."
+      />
 
-                <h3 className="mt-8 text-3xl font-bold">
-                    Design
-                </h3>
+      <DisciplineCard
+        icon={<FaMusic />}
+        title="Music Production"
+        description="Composing original soundtracks and music."
+      />
 
-                <p className="mt-4 text-lg text-slate-600">
-                    I like to create different types of retro designs.
-                </p>
+      <DisciplineCard
+        icon={<FaMicrochip />}
+        title="Electronic Circuits"
+        description="Designing electronic projects, experiments and funny things."
+      />
 
-                <button className="mt-8 text-cyan-500 hover:underline">
-                    Ver más
-                </button>
-
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-
-                <div className="w-20 h-20 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-500 text-3xl shadow-md">
-                    <FaMagic />
-                </div>
-
-                <h3 className="mt-8 text-3xl font-bold">
-                    Interactividad
-                </h3>
-
-                <p className="mt-4 text-lg text-slate-600">
-                    Experiencias dinámicas que responden a cada interacción con
-                    precisión y elegancia.
-                </p>
-
-                <button className="mt-8 text-cyan-500 hover:underline">
-                    Ver más
-                </button>
-
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-
-                <div className="w-20 h-20 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-500 text-3xl shadow-md">
-                    <FaLeaf />
-                </div>
-
-                <h3 className="mt-8 text-3xl font-bold">
-                    Organic-Tech
-                </h3>
-
-                <p className="mt-4 text-lg text-slate-600">
-                    La unión entre naturaleza y tecnología para crear
-                    experiencias únicas.
-                </p>
-
-                <button className="mt-8 text-cyan-500 hover:underline">
-                    Ver más
-                </button>
-
-            </div>
-
-        </div>
+      <DisciplineCard
+        icon={<FaGamepad />}
+        title="Game Development"
+        description="Building games based in different eras aesthetic (XX century mostly) using programming, 2D & 3D graphics, and game design."
+      />
 
     </div>
 
+  </div>
+
 </section>
+
+        {/* Section of programation */}
+        <section className="space-y-8">
+
+            <h2
+                className="
+                text-5xl
+                font-black
+                text-center
+                "
+            >
+                Programming Languages & Tools
+            </h2>
+
+            <div
+                className="
+                grid
+                grid-cols-2
+                gap-8
+                "
+            >
+                {technologies.map((tech) => (
+                    <TechCard
+                        key={tech.title}
+                        icon={tech.icon}
+                        title={tech.title}
+                        description={tech.description}
+                    />
+                ))}
+            </div>
+
+        </section>
 
     {/* FOOTER */}
     <footer className="
-         bg-linear-to-b from-gray-100/40 via-gray-600/100 to-gray-100/100
+         bg-linear-to-b from-gray-100/40 via-gray-600/100 to-gray-300/100
         backdrop-blur-xl
         border-t
         border-white/40

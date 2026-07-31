@@ -13,7 +13,7 @@ export default function BarButton({
     return (
         <button
             onClick={() => setIsVisible(!isVisible)}
-            className="bg-linear-to-b  from-white via-purple-600/100 to-white text-white px-4 py-2 rounded-full hover:bg-white"
+            className="bg-linear-to-b  from-white via-cyan-600/100 to-cyan-200 hover:to-cyan-500 text-white px-4 py-2 rounded-full hover:bg-white"
         >
         <ThreeLines />
         </button>

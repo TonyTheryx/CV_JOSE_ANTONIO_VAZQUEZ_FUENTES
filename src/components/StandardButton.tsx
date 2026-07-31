@@ -17,7 +17,7 @@
       
       <button className={`align-middle
        bg-linear-to-b from-white to-white ${colors[color]}
-       hover:to-purple-600
+       hover:to-cyan-600
         rounded-full
          text-white
           font-bold

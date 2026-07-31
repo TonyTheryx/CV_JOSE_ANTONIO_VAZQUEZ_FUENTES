@@ -3,7 +3,6 @@ import { OrbitControls } from "@react-three/drei";
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
 import { useLoader } from '@react-three/fiber'
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader.js";
-import FrutigerBar from "../components/FrutigerBar";
 
 
 
@@ -17,7 +16,6 @@ export default function ThreeLaboratory() {
   return (
 
      <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
-      <FrutigerBar isVisible={true} />
       <div className="absolute inset-0 z-10 pointer-events-none">
         
       <div

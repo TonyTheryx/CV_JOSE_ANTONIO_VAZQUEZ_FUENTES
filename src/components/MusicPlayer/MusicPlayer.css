@@ -1,0 +1,28 @@
+.memphis-layer{
+    width:200%;
+    height:200%;
+
+    background-image:url("src/components/MusicPlayer/Images/MemphisDesignBackround.png");
+    background-repeat:repeat;
+    background-size:180px;
+
+    animation:memphisMove 5s linear infinite;
+
+    opacity:.70;
+}
+
+@keyframes memphisMove{
+
+    from{
+
+        transform:translate(0px,0px);
+
+    }
+
+    to{
+
+        transform:translate(-180px,-180px);
+
+    }
+
+}
