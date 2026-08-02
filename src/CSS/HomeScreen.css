@@ -259,14 +259,15 @@ body{
 .box {
   width: 200px;
   height: 200px;
-  border-radius: 20px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   color: #ffffff;
-  background: linear-gradient(180deg, #ffffff, #2135ef);
+  background: linear-gradient(180deg, #cdd1ff, #39f5ff);
   cursor: pointer;
   font-weight: bold;
   font-family: "Arial", sans-serif;
+  clip-path: polygon(20% 0%, 100% 0%, 88% 100%, 0% 100%);
 }

@@ -1,4 +1,5 @@
 import PortfolioCarousel from "./PortFolioCarousel";
+import TeamWorksCarousel from "./TeamWorksCarousel";
 
 export default function PortfolioSection() {
   return (
@@ -70,6 +71,7 @@ export default function PortfolioSection() {
           </div>
 
           {/* Team Works */}
+            <TeamWorksCarousel />
           <div>
             <h2 className="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
               Team works
@@ -81,7 +83,6 @@ export default function PortfolioSection() {
             </p>
           </div>
 
-          <div></div>
 
           {/* The end */}
           <div>

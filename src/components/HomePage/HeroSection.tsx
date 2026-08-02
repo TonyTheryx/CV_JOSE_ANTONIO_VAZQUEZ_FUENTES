@@ -6,9 +6,8 @@ gsap.registerPlugin(useGSAP);
 
 const sections = [
   { title: "Portfolio", target: "portfolio", color: "from-white via-cyan-600 to-cyan-300" },
-  { title: "Mastering", target: "mastering", color: "from-white via-blue-800 to-blue-200" },
-  { title: "Disciplines", target: "disciplines", color: "from-white via-cyan-600 to-cyan-300" },
-  { title: "Technologies", target: "technologies", color: "from-white via-blue-800 to-blue-200" },
+  { title: "Disciplines", target: "disciplines", color: "from-white via-blue-800 to-blue-200" },
+  { title: "Technologies", target: "technologies", color: "from-white via-cyan-600 to-cyan-300" },
 ];
 
 const text =
@@ -33,45 +32,49 @@ export default function HeroSection() {
       ref={container}
       className="min-h-[90vh] flex items-center justify-center px-10"
     >
-      {/* Círculo */}
-      <div className="relative w-96 h-96 flex items-center justify-center">
-        {/* Anillo exterior */}
-        <div
-          className="
-                absolute
-                inset-0
-                rounded-full
-                border-[10px]
-                border-blue-700
-                border-dashed
-                animate-spin
-            "
-          style={{
-            clipPath: "polygon(0 0,100% 0,100% 42%,0 42%,0 58%,100% 58%,100% 100%,0 100%)",
-          }}
-        />
+      <div className="relative w-96 h-96 flex items-center justify-center animate-spin">
+        
+{/* Circle */}
+  <svg
+    className="absolute inset-0 w-full h-full"
+    viewBox="0 0 100 100"
+  >
+    <circle
+      cx="50"
+      cy="50"
+      r="42"
+      fill="none"
+      stroke="#22d3ee"
+      strokeWidth="8"
+      strokeLinecap="round"
+      strokeDasharray="60 50"
+      transform="rotate(-90 50 50)"
+    />
+  </svg>
 
-        {/* Disco central */}
-        <div
-          className="
-                w-56
-                h-56
-                rounded-full
-                bg-blue-600
-                shadow-[0_0_60px_rgba(0,200,255,.5)]
-            "
-        />
-      </div>
+  <div
+    className="
+      w-56
+      h-56
+      rounded-full
+      bg-blue-500
+      shadow-[0_0_60px_rgba(34,211,238,.5)]
+    "
+  />
+
+</div>
 
       {/* Principal text */}
       <div
+
         className="
             relative
             max-w-7xl
             rounded-[40px]
             backdrop-blur-xl
             bg-white/10
-            border border-white/20
+            border border-gray-400/100
+            border-8
             shadow-2xl
             p-16
             flex
@@ -79,6 +82,28 @@ export default function HeroSection() {
             items-center
         "
       >
+        
+        {/* CRT Scanlines */}
+<div
+  className="
+    absolute
+    inset-0
+    pointer-events-none
+    opacity-70
+    rounded-[40px]
+  "
+  style={{
+    backgroundImage: `
+      repeating-linear-gradient(
+        to bottom,
+        rgba(180,180,180,.20) 0px,
+        rgba(180,180,180,.20) 1px,
+        transparent 6px,
+        transparent 7px
+      )
+    `,
+  }}
+/>
         {/* Index */}
         <div
           className="
@@ -114,6 +139,10 @@ export default function HeroSection() {
                 hover:-translate-y-2
                 hover:scale-105
                 active:scale-95
+                border-gray-400
+                hover:border-gray-300
+                border-8
+                rounded-2xl
                 [clip-path:polygon(12%_0%,100%_0%,88%_100%,0%_100%)]
             `}
             >
@@ -133,6 +162,7 @@ export default function HeroSection() {
                     leading-none
                 "
           >
+            
             Joseph TonyTheryx
           </h1>
 
@@ -150,36 +180,13 @@ export default function HeroSection() {
             ))}
           </p>
 
-          <button
-            onClick={() => {
-              document
-                .getElementById("portfolio")
-                ?.scrollIntoView({
-                  behavior: "smooth",
-                });
-            }}
-            className="
-                    mt-10
-                    px-10
-                    py-4
-                    rounded-full
-                    bg-cyan-400
-                    hover:bg-cyan-300
-                    text-white
-                    text-xl
-                    font-semibold
-                    transition
-                "
-          >
-            Go to Portfolio
-          </button>
         </div>
 
         <div className="
                 w-64
                 h-64
                 rounded-full
-                bg-linear-to-b from-white/30 via-blue-600/90 to-white/30
+                bg-gradient-to-b from-white/30 via-blue-600/90 to-white/30
                 backdrop-blur-md
                 border
                 border-white/30
@@ -190,8 +197,11 @@ export default function HeroSection() {
                 font-black
                 text-white
             ">
+              
           T
+          
         </div>
+        
       </div>
     </section>
   );

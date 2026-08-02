@@ -1,47 +1,40 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const portfolioItems = [
+const teamWorksItems = [
   {
     type: "image",
     src: "src/components/HomePage/Images/Courage.png",
-    title: "Courage the Cowardly Dog",
+    title: "Team Work 1",
     description:
-      "It was my first 3D low poly character (Courage the Cowardly Dog)",
-  },
-  {
-    type: "video",
-    src: "src/components/HomePage/Images/Air_Hockey.mp4",
-    title: "Air Hockey",
-    description:
-      "My first 3D videogame programmed in python using pygame library, it's an important work for me because I did this when I was in 5th semester of my university, And I did it in a computer graphics course, I can't say that I did it myself because it was the work of 2 people, me and one of my friends, but with learned new things about graphics and videogames doing this.",
+      "Description of the first team work. Replace this example with the real content.",
   },
   {
     type: "video",
     src: "src/components/HomePage/Images/Pong.mp4",
-    title: "Pong Game",
+    title: "Team Work 2",
     description:
-      "Demostración del rig y la animación del personaje.",
+      "Description of the second team work. Replace this example with the real content.",
   },
   {
     type: "image",
-    src: "/Images/pixelart.png",
-    title: "Objects of XX Century",
+    src: "src/components/HomePage/Images/Courage.png",
+    title: "Team Work 3",
     description:
-      "My first little website that it's kind of an experiment, because the idea was of this page it's because I would like to have a page of a lot of references of retro objects, that I could check in case I needed for my own retro projects, I did it with a little help of another friend.",
+      "Description of the third team work. Replace this example with the real content.",
   },
 ];
 
-export default function PortfolioCarousel() {
+export default function TeamWorksCarousel() {
   const [current, setCurrent] = useState(0);
 
   const next = () =>
-    setCurrent((current + 1) % portfolioItems.length);
+    setCurrent((current + 1) % teamWorksItems.length);
 
   const previous = () =>
     setCurrent(
-      (current - 1 + portfolioItems.length) %
-        portfolioItems.length
+      (current - 1 + teamWorksItems.length) %
+        teamWorksItems.length
     );
 
   return (
@@ -50,15 +43,15 @@ export default function PortfolioCarousel() {
         {/* Carrusel */}
         <div className="relative w-full max-w-2xl">
 
-            {portfolioItems[current].type === "image" ? (
+            {teamWorksItems[current].type === "image" ? (
                 <img
-                    src={portfolioItems[current].src}
-                    alt={portfolioItems[current].title}
-                    className="w-full rounded-[2.5rem] shadow-2xl border-8 border-gray-400 [clip-path:polygon(12%_0%,100%_0%,88%_100%,0%_100%)]"
+                    src={teamWorksItems[current].src}
+                    alt={teamWorksItems[current].title}
+                    className="w-full rounded-[2.5rem] shadow-2xl"
                 />
             ) : (
                 <video
-                    src={portfolioItems[current].src}
+                    src={teamWorksItems[current].src}
                     controls
                     className="w-full rounded-[2.5rem] shadow-2xl"
                 />
@@ -84,18 +77,18 @@ export default function PortfolioCarousel() {
         <div className="mt-6 text-justify max-w-2xl">
 
             <h2 className="text-3xl font-bold text-white">
-                {portfolioItems[current].title}
+                {teamWorksItems[current].title}
             </h2>
 
             <p className="mt-3 text-lg text-gray-600">
-                {portfolioItems[current].description}
+                {teamWorksItems[current].description}
             </p>
 
         </div>
 
         {/* Indicadores */}
         <div className="flex gap-3 mt-6">
-            {portfolioItems.map((_, index) => (
+            {teamWorksItems.map((_, index) => (
                 <button
                     key={index}
                     onClick={() => setCurrent(index)}
