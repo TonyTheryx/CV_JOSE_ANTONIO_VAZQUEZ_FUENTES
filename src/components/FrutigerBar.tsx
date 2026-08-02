@@ -55,14 +55,14 @@ export default function FrutigerBar(props: { isVisible: boolean }) {
       href="/settings/profile"
       className="block px-4 py-2 text-white hover:bg-purple-600"
     >
-      Perfil
+      Mode
     </a>
 
     <a
       href="/settings/theme"
       className="block px-4 py-2 text-white hover:bg-purple-600"
     >
-      Tema
+      Lenguage
     </a>
 
     <a

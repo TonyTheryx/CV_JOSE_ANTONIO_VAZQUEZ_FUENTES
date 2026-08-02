@@ -10,16 +10,16 @@ const portfolioItems = [
       "It was my first 3D low poly character (Courage the Cowardly Dog)",
   },
   {
-    type: "image",
-    src: "/Images/modelo3d.png",
+    type: "video",
+    src: "src/components/HomePage/Images/Air_Hockey.mp4",
     title: "Air Hockey",
     description:
       "My first 3D videogame programmed in python using pygame library, it's an important work for me because I did this when I was in 5th semester of my university, And I did it in a computer graphics course, I can't say that I did it myself because it was the work of 2 people, me and one of my friends, but with learned new things about graphics and videogames doing this.",
   },
   {
     type: "video",
-    src: "/Videos/demo.mp4",
-    title: "Animación",
+    src: "src/components/HomePage/Images/Pong.mp4",
+    title: "Pong Game",
     description:
       "Demostración del rig y la animación del personaje.",
   },

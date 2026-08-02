@@ -123,11 +123,12 @@ duration-300
 >
 
     <img
-        src="/Albums/album1.jpg"
+    
+        src="src\components\MusicPlayer\Images\Whispers of Something.png"
         className="
-        w-full
         aspect-square
         object-cover
+        w-60 h-60
         "
     />
 

@@ -154,6 +154,13 @@ const technologies = [
     }
 ];
 
+// Sections
+const sections = [
+  { title: "Portfolio", target: "portfolio", color: "from-white via-cyan-600 to-cyan-300" },
+  { title: "Mastering", target: "mastering", color: "from-white via-blue-800 to-blue-200" },
+  { title: "Disciplines", target: "disciplines", color: "from-white via-cyan-600 to-cyan-300" },
+  { title: "Technologies", target: "technologies", color: "from-white via-blue-800 to-blue-200" },
+];
 
   // Animation for the main text
   const container = useRef(null);
@@ -186,43 +193,56 @@ useGSAP(() => {
       <WarningBox1 message="This is a warning message!" />
       <WarningBox message="This is another warning message!" />
       
-      {/* Cielo */}
-      <div className="absolute" />
 
-      
-      <div className="absolute" />
-
-      {/* Burbujas */}
-      <div className="absolute inset-0 pointer-events-none">
-        {bubbles.map((b) => (
-          <div
-            key={b.id}
-            className="bubble animate-float"
-            style={{
-              width: b.size,
-              height: b.size,
-              left: `${b.left}%`,
-              bottom: "-10%",
-              animationDelay: `${b.delay}s`,
-              animationDuration: `${b.duration}s`,
-            }}
-          />
-        ))}
-      </div>
-
-
-      {/* Contenido */}
+{/* Welcome box */}
      <main className="relative z-10">
+        
         <div className="box" ref={boxRef}> 
             Welcome
         </div>
-    {/* Principal text */}
-    <section 
-    ref={container}
-    className="min-h-[90vh] flex items-center justify-center px-10">
 
+{/* Introduction */}
+ <section 
+    ref={container}
+    className="min-h-[90vh] flex items-center justify-center px-10 ">
+
+
+{/* Círculo */}
+    <div className="relative w-96 h-96 flex items-center justify-center">
+
+        {/* Anillo exterior */}
+        <div
+            className="
+                absolute
+                inset-0
+                rounded-full
+                border-[10px]
+                border-blue-700
+                border-dashed
+                animate-spin
+            "
+            style={{
+                clipPath: "polygon(0 0,100% 0,100% 42%,0 42%,0 58%,100% 58%,100% 100%,0 100%)"
+            }}
+        />
+
+        {/* Disco central */}
+        <div
+            className="
+                w-56
+                h-56
+                rounded-full
+                bg-blue-600
+                shadow-[0_0_60px_rgba(0,200,255,.5)]
+            "
+        />
+
+    </div>
+            
+    {/* Principal text */}
         <div className="
-            w-full
+            relative
+            
             max-w-7xl
             rounded-[40px]
             backdrop-blur-xl
@@ -234,6 +254,56 @@ useGSAP(() => {
             justify-between
             items-center
         ">
+
+    {/* Index */}
+    <div
+        className="
+            absolute
+            left-8
+            -top-6
+            flex
+            gap-3
+            z-20
+        "
+    >
+
+    {sections.map(section => (
+
+        <button
+            key={section.title}
+            onClick={() =>
+                document
+                    .getElementById(section.target)
+                    ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className={`
+                group
+                relative
+                px-10
+                py-4
+                text-white
+                font-black
+                tracking-wide
+                bg-gradient-to-b
+                ${section.color}
+                shadow-xl
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:scale-105
+                active:scale-95
+                [clip-path:polygon(12%_0%,100%_0%,88%_100%,0%_100%)]
+            `}
+        >
+
+            <span className="relative z-10">
+                {section.title}
+            </span>
+
+        </button>
+
+    ))}
+</div>            
 
             <div className="max-w-3xl">
 
@@ -337,7 +407,7 @@ useGSAP(() => {
             <div>
 
                 <p className="uppercase tracking-[0.3em] text-cyan-400 font-bold mb-6">
-                    Portfoilio
+                    Portfolio
                 </p>
 
                 <h2 className="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
@@ -411,7 +481,7 @@ useGSAP(() => {
     </section>
 
 {/* Section of habilities & disciplines */}
-<section className="w-full py-24 px-8">
+<section id="disciplines" className="w-full py-24 px-8">
 
   <div className="max-w-7xl mx-auto">
 
@@ -464,7 +534,7 @@ useGSAP(() => {
 </section>
 
         {/* Section of programation */}
-        <section className="space-y-8">
+        <section id="technologies" className="space-y-8">
 
             <h2
                 className="
