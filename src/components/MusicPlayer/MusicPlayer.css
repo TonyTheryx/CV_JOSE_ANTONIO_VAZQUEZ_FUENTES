@@ -1,3 +1,5 @@
+
+/* Background */
 .memphis-layer{
     width:200%;
     height:200%;
@@ -24,5 +26,33 @@
         transform:translate(-180px,-180px);
 
     }
+}
 
+/* MusicPlayer */
+.reel{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:7px solid #444;
+    position:absolute;
+}
+
+.reel::before{
+    content:"";
+    position:absolute;
+    inset:30%;
+    background:black;
+    border-radius:50%;
+}
+.playing{
+    animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
