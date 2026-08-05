@@ -1,9 +1,16 @@
 import MemphisBackground from "../components/MusicPlayer/MemphisBackground";
 import Introduction from "../components/MusicPlayer/Introduction";
 import MusicPlayerSection from "../components/MusicPlayer/MusicPlayerSection";
-import Albums from "../components/MusicPlayer/Albums";
+import Albums from "../components/MusicPlayer/Albums.tsx";
+import { useState } from "react";
 
 export default function MusicPlayer() {
+const [albumIndex,setAlbumIndex]=useState(0);
+    const playAlbum=(index:number)=>{
+
+    setAlbumIndex(index);
+
+}
     return (
 <div className="bg-blue-400 relative min-h-screen">
 
@@ -30,10 +37,10 @@ space-y-16
     {/* Music Player */}
     <MusicPlayerSection/>
     {/*Catalog*/}
-    <Albums/>
+    <Albums onPlayAlbum={playAlbum}/>
 
-</section>
-</div>
+    </section>
+    </div>
     );
 
 

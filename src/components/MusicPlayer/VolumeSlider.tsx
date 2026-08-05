@@ -1,4 +1,8 @@
-export default function VolumeSlider(){
+interface VolumeSliderProps {
+    onVolumeChange: (value: number) => void;
+}
+
+export default function VolumeSlider({ onVolumeChange }: VolumeSliderProps) {
 
     return(
 
@@ -17,18 +21,17 @@ export default function VolumeSlider(){
         >
 
             <input
-
-                type="range"
-
-                orient="vertical"
-
-                className="
-                rotate-90
-                w-[170px]
-                mt-16
-                "
-
-            />
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            defaultValue="1"
+            
+            onChange={(e) => onVolumeChange(Number(e.target.value))}
+            style={{
+                 writingMode: "vertical-lr",
+             }}
+        />
 
         </div>
 

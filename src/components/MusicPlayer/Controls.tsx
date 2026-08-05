@@ -1,57 +1,71 @@
-const buttons=[
-"⏮",
-"▶",
-"⏸",
-"⏹",
-"⏭"
-];
+interface ControlsProps {
+    onPlay: () => void;
+    onPause: () => void;
+    onStop: () => void;
+    onNext: () => void;
+    onPrevious: () => void;
+}
+;
+export default function Controls({
+    onPlay,
+    onPause,
+    onStop,
+    onNext,
+    onPrevious,
+}: ControlsProps) {
+    
+const buttonStyle = `
+    w-20
+    h-24
+    rounded
+    text-white
+    text-2xl
+    flex
+    items-center
+    justify-center
+    shadow-lg
+    transition-all
+    duration-150
 
-export default function Controls(){
+    active:translate-y-[4px]
+    active:shadow-inner
 
-    return(
+    border
+    border-[#222]
 
-        <div
-            className="
-            absolute
-            bottom-8
-            left-1/2
-            -translate-x-1/2
-            flex
-            gap-1
-            "
-        >
+    bg-[#3d3d42]
+`;
+    return (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1">
 
-            {
+            <button className={buttonStyle} onClick={onPrevious}
+             style={{
+                backgroundImage: `
+                    repeating-linear-gradient(
+                        to bottom,
+                        rgba(255,255,255,.12) 0px,
+                        rgba(255,255,255,.12) 1px,
+                        transparent 1px,
+                        transparent 4px
+                    ),
+                    linear-gradient(
+                        to bottom,
+                        #505056,
+                        #3d3d42 45%,
+                        #2c2c2f
+                    )
+                `
+            }}
+            >⏮</button>
 
-                buttons.map((b)=>(
+            <button className={buttonStyle} onClick={onPlay}>▶</button>
 
-                    <button
+            <button className={buttonStyle} onClick={onPause}>⏸</button>
 
-                        key={b}
+            <button className={buttonStyle} onClick={onStop}>⏹</button>
 
-                        className="
-                        w-20
-                        h-24
-                        bg-[#3d3d42]
-                        text-white
-                        active:translate-y-2
-                        active:shadow-inner
-                        rounded
-                        transition-all
-                        "
-
-                    >
-
-                        {b}
-
-                    </button>
-
-                ))
-
-            }
+            <button className={buttonStyle} onClick={onNext}>⏭</button>
 
         </div>
-
-    )
-
+    );
 }

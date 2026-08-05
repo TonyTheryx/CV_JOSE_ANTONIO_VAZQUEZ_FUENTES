@@ -1,11 +1,16 @@
 interface AlbumCardProps {
-    image: string;
-    title: string;
-    year: string;
-    description: string;
+    image:string;
+
+    title:string;
+
+    year:string;
+
+    description:string;
+
+    onPlay:()=>void;
 }
 
-export default function AlbumCard({ image, title, year, description }: AlbumCardProps) {
+export default function AlbumCard({ image, title, year, description, onPlay }: AlbumCardProps) {
     return (
         <div
             className="
@@ -44,7 +49,9 @@ export default function AlbumCard({ image, title, year, description }: AlbumCard
                     {description}
                 </p>
 
-                <button className="
+                <button 
+                onClick={onPlay}
+                className="
                 mt-6
                 px-5
                 py-2
