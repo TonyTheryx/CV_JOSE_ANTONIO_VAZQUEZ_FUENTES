@@ -28,9 +28,12 @@ border-white/20
 shadow-2xl
 p-14
 space-y-16
+flex
+flex-col
+items-center
 "
 >
-        {/* Introduccion */}
+    {/* Introduccion */}
     <Introduction/>
 
 

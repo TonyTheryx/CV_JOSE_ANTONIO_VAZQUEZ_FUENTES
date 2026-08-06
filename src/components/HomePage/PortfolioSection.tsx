@@ -1,5 +1,6 @@
 import PortfolioCarousel from "./PortFolioCarousel";
 import TeamWorksCarousel from "./TeamWorksCarousel";
+import Bunny from "./Bunny";
 
 export default function PortfolioSection() {
   return (
@@ -22,10 +23,15 @@ export default function PortfolioSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Texto */}
           <div>
+            <div className="
+            h-50
+            pl-50
+            "> 
+            <Bunny/>
+            </div>
             <p className="uppercase tracking-[0.3em] text-cyan-400 font-bold mb-6">
               Portfolio
             </p>
-
             <h2 className="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
               Works
             </h2>

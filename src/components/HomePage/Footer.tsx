@@ -32,7 +32,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="
-         bg-linear-to-b from-gray-100/40 via-gray-600/100 to-gray-300/100
+         bg-linear-to-b from-gray-100/40 via-gray-700/100 to-gray-400/100
         backdrop-blur-xl
         border-t
         border-white/40

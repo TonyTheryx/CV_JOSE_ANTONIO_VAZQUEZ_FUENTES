@@ -16,6 +16,7 @@ export default function MusicPlayerSection() {
     const [trackIndex, setTrackIndex] = useState(0);
     const currentTrack =
     albums[albumIndex].tracks[trackIndex];
+    const currentName = albums[albumIndex].tracks[trackIndex].title;
 
     /* Play */
     const onPlay = () => {
@@ -56,6 +57,10 @@ export default function MusicPlayerSection() {
     return (
           <div
             className="
+            items-center
+            justify-center
+            flex
+            flex-col
             relative
             w-[700px]
             h-[640px]
@@ -70,7 +75,7 @@ export default function MusicPlayerSection() {
 
             <Speaker/>
 
-            <Cassette/>
+            <Cassette name={currentName} />
 
             <VolumeSlider onVolumeChange={volumeChangeHandler} />
 

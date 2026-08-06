@@ -17,7 +17,6 @@ export default function HomeScreen() {
       {/* Welcome box */}
       <main className="relative z-10">
         <WelcomeBox />
-
         <HeroSection />
         <PortfolioSection />
         <DisciplinesSection />
