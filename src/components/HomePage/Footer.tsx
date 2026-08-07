@@ -48,14 +48,14 @@ export default function Footer() {
             gap-10
         ">
         <div>
-          <h3 className="font-bold text-lg text-white">Contacto</h3>
+          <h3 className="font-bold text-lg text-white">Contact</h3>
           <p className="text-white">TonyTheryx@gmail.com</p>
         </div>
 
-        {/* Redes Sociales */}
+        {/* Social Media */}
         <div>
           <h3 className="text-lg text-white font-bold text-slate-800 mb-4">
-            Redes Sociales
+            Social Media
           </h3>
 
           <div className="flex gap-4">

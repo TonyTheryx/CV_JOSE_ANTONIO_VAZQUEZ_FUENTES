@@ -23,9 +23,6 @@ export default function DisciplineCard({
         {description}
       </p>
 
-      <button className="mt-8 text-cyan-500 hover:underline">
-        View More
-      </button>
     </div>
   );
 }

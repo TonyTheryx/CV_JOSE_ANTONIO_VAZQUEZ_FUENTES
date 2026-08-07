@@ -4,25 +4,33 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const teamWorksItems = [
   {
     type: "image",
-    src: "src/components/HomePage/Images/Courage.png",
-    title: "Team Work 1",
+    src: "src/components/HomePage/Images/MiCanasta1.png",
+    title: "Mi Canasta (My Basket or My Pantry)",
     description:
-      "Description of the first team work. Replace this example with the real content.",
-  },
-  {
-    type: "video",
-    src: "src/components/HomePage/Images/Pong.mp4",
-    title: "Team Work 2",
-    description:
-      "Description of the second team work. Replace this example with the real content.",
+      "MiCanasta is a website app where you can manage the money you spend for food, all we know that the less money we spend the more things we can buy and also save it for an emergency."
+      ,
   },
   {
     type: "image",
-    src: "src/components/HomePage/Images/Courage.png",
-    title: "Team Work 3",
+    src: "src/components/HomePage/Images/MiCanasta2.png",
+    title: "Mi Canasta (My Basket or My Pantry)",
     description:
-      "Description of the third team work. Replace this example with the real content.",
+      "Mi Canasta (My Basket or My Pantry) is a very simple app, first you register to get an acount, then you can set your budget and then make a list about all kind of food you will buy in a month, and you can make it defining how much does the food cost, like litters, kilograms, or only defining a bag or can of food.",
   },
+  {
+    type: "image",
+    src: "src/components/HomePage/Images/MiCanasta3.png",
+    title: "Mi Canasta (My Basket or My Pantry)",
+    description:
+      "At the end we add a function were you can make a recipe with all the ingredients that you wish, like the list of the month but for recipes. The app includes functions like, set your budget, make your pantry, check 3 diferent supermarkets in a catalog (our city supermarkets like a test trying to include real supermarkets and check the lowest prize in every food), history where you could check all pantries that you created before (including the money you spend to know if you exceeded the badget).",
+  },
+  {
+  type: "image",
+    src: "src/components/HomePage/Images/Mi_Canasta_Logo.png",
+    title: "Mi Canasta Logtype",
+    description:
+      "I did the Mi Canasta logtype using inkscape.",
+  }
 ];
 
 export default function TeamWorksCarousel() {
@@ -76,7 +84,7 @@ export default function TeamWorksCarousel() {
         {/* Información */}
         <div className="mt-6 text-justify max-w-2xl">
 
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-3xl font-bold text-gray-700">
                 {teamWorksItems[current].title}
             </h2>
 

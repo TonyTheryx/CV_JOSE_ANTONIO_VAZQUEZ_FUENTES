@@ -52,6 +52,7 @@ export default function PortfolioSection() {
           </div>
 
           {/* Imagen */}
+          {/* Individual Works */}
           <div
             className="
                 relative
@@ -73,19 +74,41 @@ export default function PortfolioSection() {
                 before:pointer-events-none
             "
           >
+            
             <PortfolioCarousel />
           </div>
 
-          {/* Team Works */}
+          <div
+            className="
+                relative
+                p-8
+                rounded-[40px]
+                bg-gradient-to-b
+                to-blue-300/100
+                to-blue-300/100
+                via-white/100
+                backdrop-blur-xl
+                border
+                border-cyan-200/60
+                shadow-[0_0_30px_rgba(0,180,255,0.35)]
+                before:absolute
+                before:inset-3
+                before:rounded-[30px]
+                before:border
+                before:border-white/40
+                before:pointer-events-none
+            "
+          >
             <TeamWorksCarousel />
+          </div>
+           {/* Team Works */}
           <div>
             <h2 className="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
               Team works
             </h2>
 
             <p className="mt-6 text-xl leading-10 text-slate-600 gap-5">
-              Next works were works that I participated but they were works with
-              more people behind.
+            I'm going to talk about only 1 proyect that I did in teamwork (Mi Canasta), I work in this proyect,but too many people also participated too, but I think it was a good project to talk in this website.
             </p>
           </div>
 

@@ -25,10 +25,10 @@ const portfolioItems = [
   },
   {
     type: "image",
-    src: "/Images/pixelart.png",
-    title: "Objects of XX Century",
+    src: "src/components/HomePage/Images/ObjetosSigloXX.png",
+    title: "Objetos Siglo XX (Objects of XX century)",
     description:
-      "My first little website that it's kind of an experiment, because the idea was of this page it's because I would like to have a page of a lot of references of retro objects, that I could check in case I needed for my own retro projects, I did it with a little help of another friend.",
+      "My first little website that it's kind of an experiment, because the idea was of this page it's because I would like to have a page of a lot of references of retro objects, that I could check in case I needed for my own retro projects, I did it with a little help of another friend, and you will find this page in catalog section.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function PortfolioCarousel() {
                 <img
                     src={portfolioItems[current].src}
                     alt={portfolioItems[current].title}
-                    className="w-full rounded-[2.5rem] shadow-2xl border-8 border-gray-400 [clip-path:polygon(12%_0%,100%_0%,88%_100%,0%_100%)]"
+                    className="w-full rounded-[2.5rem] shadow-2xl border-"
                 />
             ) : (
                 <video
@@ -83,7 +83,7 @@ export default function PortfolioCarousel() {
         {/* Información */}
         <div className="mt-6 text-justify max-w-2xl">
 
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-3xl font-bold text-gray-700">
                 {portfolioItems[current].title}
             </h2>
 

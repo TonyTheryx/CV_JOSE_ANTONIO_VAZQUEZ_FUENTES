@@ -47,7 +47,7 @@ export default function DisciplinesSection() {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-black text-slate-900 mb-20">
           Habilities & Disciplines that I'd love to explore more and master
-          (Hobbies)
+          (main hobbies).
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">

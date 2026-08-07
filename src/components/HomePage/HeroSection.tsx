@@ -11,7 +11,7 @@ const sections = [
 ];
 
 const text =
-  "Hello My name is Joseph TonyTheryx, I am an artist and a developer, I like to design retro and diferent experiences.";
+  "Hello My name is Joseph TonyTheryx, I am an artist and a developer, I like to design retro and diferent kind of experiences.";
 const words = text.split(" ");
 
 export default function HeroSection() {
